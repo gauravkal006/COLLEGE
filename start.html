@@ -1,40 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>College Website</title>
 
-    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      function refresh() {
+        location.replace("start.html");
+      }
+    </script>
 
-   <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    
-    
-
+  <body>
     <div id="preloader"></div>
     <div class="container">
-    <nav class=" ">
-           <ul>
-            <li><a href="#NBA" class="menu-btn">NBA</a></li>
-            <li><a href="#rti" class="menu-btn">R.T.I</a></li>
-            <li><a href="#Tenders" class="menu-btn">Tenders</a></li>
-            <li><a href="#Notification" class="menu-btn">Notification</a></li>
-            <li><a href="#Academic Calender" class="menu-btn">Academic Calender</a></li>
-            <li><a href="#Suggestion & Feedback" class="menu-btn">Suggestion & Feedback</a></li>
-            <li><img src="sbi.png" width="45" height="25" alt=""><a href="#Admissinon fees Collect" class="menu-btn">Admissinon fees Collect</a></li>
-            
-            </ul>
-           
-        
-        
-    </nav>
-</div>
+      <nav class=" ">
+        <ul>
+          <li onclick="f()">NBA</li>
+          <li>R.T.I</li>
+          <li>Tenders</li>
+          <li>Notification</li>
+          <li>Academic Calender</li>
+          <li>Suggestion & Feedback</li>
+          <li>
+            <img src="sbi.png" width="45" height="25" alt="" />Admissinon fees
+            Collect
+          </li>
 
- 
-</body>
+          <!-- <li><a href="#">NBA</a></li>
+          <li><a href="#">R.T.I</a></li>
+          <li><a href="#">Tenders</a></li>
+          <li><a href="#">Notification</a></li>
+          <li><a href="#">Academic Calender</a></li>
+          <li><a href="#">Suggestion & Feedback</a></li>
+          <li><a href="#"><img src="sbi.png" width="45" height="25" alt="" />Admissinon fees Collect></a></li> -->
+        </ul>
+      </nav>
+    </div>
 
+    <div class="logo">
+      <img
+        src="collegeLogo.jpg"
+        alt=""
+        width="100"
+        height="100"
+        onclick="refresh()"
+      />
+      <div class="text-container">
+        <span onclick="refresh()"> Government Polytechnic, Amravati</span>
+        <span onclick="refresh()"
+          ><p>An Autonomous Institute of Government of Maharashtra</p></span
+        >
+      </div>
+    </div>
+
+    <div class="nav2">
+      <ul>
+        <li>Home</li>
+        <li>About us</li>
+        <li>Department</li>
+        <li class="dropdown">
+          CDC
+          <ul class="dropdown-content">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </li>
+        <li>Student Section</li>
+        <li>Traning & Placement</li>
+        <li>Exam Cell</li>
+        <li>Photo Gallery</li>
+        <li>CDTP</li>
+      </ul>
+    </div>
+    <!-- <br /> -->
+    <div class="iframeContainer">
+      <iframe src="index.html" scrolling="no" class="iframeContent"></iframe>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <script>
+      $(document).ready(function () {
+        $(".nav2 li").hover(
+          function () {
+            $(this).addClass("hovered"); // Add class on hover
+          },
+          function () {
+            $(this).removeClass("hovered"); // Remove class on mouseout
+          }
+        );
+      });
+
+      $(document).ready(function () {
+        $(".dropdown").hover(
+          function () {
+            $(this).find(".dropdown-content").addClass("show"); // Show dropdown content on hover
+          },
+          function () {
+            $(this).find(".dropdown-content").removeClass("show"); // Hide dropdown content on mouseout
+          }
+        );
+      });
+    </script>
+  </body>
 </html>
