@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 10;
+  padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
@@ -99,42 +99,37 @@ nav ul li:hover::after {
   position: relative;
   padding: 10px;
   border-radius: 10px;
-  transition: background-color 0.3s ease; /* Horizontally center the items */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav2:hover {
+  background-color: #b3aa77;
 }
 
 .nav2 ul {
-  list-style: georgian;
-  padding: 0px;
+  list-style: none;
+  padding: 0;
+  display: inline-block;
 }
 
 .nav2 li {
-  margin: 10px 10px; /* Adjust margin as needed */
   display: inline-block;
-  list-style: none;
-  padding: 1px 1px;
   margin: 10px;
-  font-size: 18px;
-  font-weight: 10;
-  color: #684a4a;
   position: relative;
-  justify-items: center;
+  font-size: 18px;
   font-weight: bolder;
-  transition: font-size 0.3s ease; /* Smooth transition for font size change */
-  /* height: 3px;
-  width: 10;
-  left: 10; */
-  /* top: 10px; */
+  color: #684a4a;
+  list-style: none;
+  justify-items: center;
+  padding: 1px;
+  display: inline-block;
+  transition: font-size 0.3s ease;
 }
 
-.nav2 li.hovered {
-  font-size: 25px; /* Larger font size */
+.nav2 li:hover {
+  font-size: 25px;
   color: #060606;
-  block-size: 20px;
-  border-color: rgb(6, 6, 6);
-  transition: background-color 0.3s ease; /* Smooth transition */
-  /* background-color: #ffd700; */
-  height: 3px;
-  bottom: -10px;
 }
 
 .dropdown-content {
@@ -146,15 +141,19 @@ nav ul li:hover::after {
   border-radius: 10px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  z-index: 1000; /* Ensure dropdown appears above iframe */
+  z-index: 1000;
 }
 
 .dropdown-content li {
-  padding: 5px 0; /* Adjust padding as needed */
+  padding: 5px 0;
 }
 
-.show {
-  display: block; /* Show dropdown content when the class is added */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover > ul > li {
+  color: #060606;
 }
 
 .slider {
@@ -177,8 +176,8 @@ nav ul li:hover::after {
 }
 
 .iframeContainer {
-  position: relative;
-  width: 1472px;
+  /* position: relative; */
+  width: 1475px;
   height: 1000px;
   overflow: hidden;
   position: relative; /* Ensure iframe container has a stacking context */
@@ -189,6 +188,6 @@ nav ul li:hover::after {
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 1472px;
+  width: 1475px;
   height: 1000px;
 }

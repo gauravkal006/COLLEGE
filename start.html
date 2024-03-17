@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>College Website</title>
-    <script
-      alt="for chatbot"
-      src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"
-    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
     <script>
       function refresh() {
@@ -30,8 +28,8 @@
           <li>Academic Calender</li>
           <li>Suggestion & Feedback</li>
           <li>
-            <img src="img/sbi.png" width="45" height="25" alt="" />Admissinon fees
-            Collect
+            <img src="img/sbi.png" width="45" height="25" alt="" />Admissinon
+            fees Collect
           </li>
 
           <!-- <li><a href="#">NBA</a></li>
@@ -86,8 +84,6 @@
       <iframe src="index.html" scrolling="no" class="iframeContent"></iframe>
     </div>
 
-
-
     <br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br />
@@ -102,18 +98,23 @@
             $(this).removeClass("hovered"); // Remove class on mouseout
           }
         );
+ 
       });
 
       $(document).ready(function () {
-        $(".dropdown").hover(
-          function () {
-            $(this).find(".dropdown-content").addClass("show"); // Show dropdown content on hover
-          },
-          function () {
-            $(this).find(".dropdown-content").removeClass("show"); // Hide dropdown content on mouseout
-          }
-        );
-      });
+  // Hide dropdown content initially
+  $(".dropdown-content").hide();
+
+  // Show dropdown content when CDC is hovered over
+  $(".dropdown").mouseenter(function () {
+    $(this).find(".dropdown-content").show();
+  });
+
+  // Hide dropdown content when cursor leaves CDC
+  $(".dropdown").mouseleave(function () {
+    $(this).find(".dropdown-content").hide();
+  });
+});
     </script>
   </body>
 </html>
